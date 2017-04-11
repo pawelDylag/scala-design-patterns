@@ -73,3 +73,7 @@ V
 +src/main/scala-2.12/functional/monads.scala,9/8/98f3d585a31f4ea5985f4198d9f002d45f154cc7
 T
 $src/main/scala-2.12/demo/Monad.scala,9/c/9c510fc35c7b9076952b8b0652d3683e8eb4c5f7
+[
++src/main/scala-2.12/structural/Reader.scala,5/0/50c3cd814d49c00a72bfe2ca315fe0176a64e6d3
+X
+(src/main/scala-2.12/demo/Decorator.scala,9/3/93e7da0b49188f0fdd40f398aaf33f060ad2534d
