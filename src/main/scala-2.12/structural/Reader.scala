@@ -12,7 +12,7 @@ trait Reader {
 }
 
 
-class FileReader (filepath: String) extends Reader {
+class SystemFileReader(filepath: String) extends Reader {
   var iterator = Source.fromFile(filepath).getLines()
   override def readNext(): String = {
     iterator.next()
@@ -33,7 +33,7 @@ class InputReader extends Reader {
   }
 }
 
-class UpperCaseFileReader(fileReader: FileReader) extends Reader {
+class UpperCaseFileReader(fileReader: SystemFileReader) extends Reader {
   override def readNext(): String = {
     fileReader.readNext().toUpperCase
   }
@@ -43,7 +43,7 @@ class UpperCaseFileReader(fileReader: FileReader) extends Reader {
   }
 }
 
-class WhitespaceFileReader(fileReader: FileReader) extends Reader {
+class WhitespaceFileReader(fileReader: SystemFileReader) extends Reader {
   override def readNext(): String = {
     fileReader.readNext().filterNot((x: Char) => x.isWhitespace)
   }

@@ -1,6 +1,6 @@
 package demo
 
-import structural.{InputReader, Reader, FileReader, WhitespaceFileReader, WhitespaceInputReader, UpperCaseFileReader, UpperCaseInputReader}
+import structural.{InputReader, Reader, SystemFileReader, WhitespaceFileReader, WhitespaceInputReader, UpperCaseFileReader, UpperCaseInputReader}
 /**
   * Created by paweldylag on 04/04/2017.
   */
@@ -9,7 +9,7 @@ object Decorator {
   var FILE = "file2.txt";
 
   def main(args: Array[String]): Unit = {
-   var fileReader = new FileReader(FILE)
+   var fileReader = new SystemFileReader(FILE)
    var whitespaceFileReader = new WhitespaceFileReader(fileReader)
    var upperCaseFileReader = new UpperCaseFileReader(fileReader)
     while (fileReader.hasNext()) {
